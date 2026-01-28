@@ -7,16 +7,34 @@
             <ul
                 tabindex="-1"
                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                <li><a>{{__("Iniciar Sesión")}}</a></li>
-                <li><a>{{__("Registrarse")}}</a></li>
+                <li><a href='login'>{{__("Iniciar Sesión")}}</a></li>
+                <li><a href="register">{{__("Registrarse")}}</a></li>
             </ul>
         </div>
         <img src="{{asset("images/HoopLab_recortada.png")}}" alt="imagen" class="h-16 ml-1">
     </div>
-    <div class="navbar-end hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
-            <li><a>{{__("Iniciar Sesión")}}</a></li>
-            <li><a>{{__("Registrarse")}}</a></li>
-        </ul>
-    </div>
+    @guest
+        <div class="navbar-end hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 gap-1">
+                <li><a href='login' class="btn btn-soft btn-primary">{{__("Iniciar Sesión")}}</a></li>
+                <li><a href="register" class="btn btn-primary">{{__("Registrarse")}}</a></li>
+            </ul>
+        </div>
+    @endguest
+    @auth
+        <div class="navbar-end hidden lg:flex">
+            <div class="flex items-center gap-3">
+                <span class="font-semibold text-sm">
+                    {{ auth()->user()->name }}
+                </span>
+                <form action="logout" method="POST">
+                    @csrf
+                    <button class="btn btn-soft btn-primary">
+                        {{ __("Logout") }}
+                    </button>
+                </form>
+            </div>
+        </div>
+    @endauth
+    <x-language-switcher />
 </div>

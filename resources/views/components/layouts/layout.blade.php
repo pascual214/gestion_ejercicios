@@ -11,7 +11,7 @@
 <body>
     <x-layouts.header />
 
-    <main class="h-main bg-blue-100">
+    <main class="h-main bg-blue-300">
         {{$slot}}
     </main>
 
