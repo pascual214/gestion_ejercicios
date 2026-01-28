@@ -82,5 +82,16 @@
     "Whoops!": "Whoops!",
     "You are receiving this email because we received a password reset request for your account.": "You are receiving this email because we received a password reset request for your account.",
     "You're logged in!": "You're logged in!",
-    "Your email address is unverified.": "Your email address is unverified."
+    "Your email address is unverified.": "Your email address is unverified.",
+    "Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\\'t receive the email, we will gladly send you another.": "",
+    "Selecciona idioma": "Select lenguage",
+    "Sobre nosotros": "About us",
+    "Contacto": "Contact",
+    "Iniciar Sesión": "Log in",
+    "Registrarse": "Sign in",
+    "Crea, guarda y comparte": "Create, save and share",
+    "Empezar": "Start",
+    "Texto": "Text",
+    "auth.password": "",
+    "Crea tus entrenamientos para todas las edades y niveles, guardalos y compartelos con amigos, entrenadores o compañeros.": "Create your workouts for all ages and levels, save them, and share them with friends, coaches, or teammates."
 }

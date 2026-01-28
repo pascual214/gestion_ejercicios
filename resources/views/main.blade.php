@@ -6,10 +6,9 @@
         <div class="hero-overlay"></div>
         <div class="hero-content text-neutral-content text-center">
             <div class="max-w-md">
-                <h1 class="mb-5 text-5xl font-bold">{{__("Crea, guarda y comparte")}}</h1>
+                <h1 class="mb-5 text-5xl font-bold">{{ __('Crea, guarda y comparte') }}</h1>
                 <p class="mb-5">
-                    {{__("Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                    quasi. In deleniti eaque aut repudiandae et a id nisi.")}}
+                    {{ __('Crea tus entrenamientos para todas las edades y niveles, guardalos y compartelos con amigos, entrenadores o compañeros.') }}
                 </p>
                 <button class="btn btn-primary">{{__("Empezar")}}</button>
             </div>

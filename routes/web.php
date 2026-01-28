@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/lang/{locale}', function (string $locale) {
-    if (! in_array($locale, ['es', 'en'])) {
+    if (! in_array($locale, ['es', 'en', 'fr'])) {
         abort(400);
     }
 

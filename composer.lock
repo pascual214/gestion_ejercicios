@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9f6823a614a1f97b9a6f56ee2d478ff",
+    "content-hash": "413f0d74e941e261509d7fb9f792ce22",
     "packages": [
         {
             "name": "archtechx/enums",
@@ -4341,6 +4341,61 @@
                 "source": "https://github.com/ramsey/uuid/tree/4.9.2"
             },
             "time": "2025-12-14T04:43:48+00:00"
+        },
+        {
+            "name": "subotkevic/laravel-json-translation-helper",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/subotkevic/laravel-json-translation-helper.git",
+                "reference": "a5e6722df7f22fe708fcad3dea2f35dc643f8d79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/subotkevic/laravel-json-translation-helper/zipball/a5e6722df7f22fe708fcad3dea2f35dc643f8d79",
+                "reference": "a5e6722df7f22fe708fcad3dea2f35dc643f8d79",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laravel/framework": ">=5.4.x-dev",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JsonTranslationHelper\\TranslationHelperServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "JsonTranslationHelper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Artur Subotkevič",
+                    "email": "artur@subotkevic.com"
+                }
+            ],
+            "description": "Searches for translation keys – inserts into JSON translation files.",
+            "support": {
+                "issues": "https://github.com/subotkevic/laravel-json-translation-helper/issues",
+                "source": "https://github.com/subotkevic/laravel-json-translation-helper/tree/master"
+            },
+            "time": "2018-11-07T05:34:25+00:00"
         },
         {
             "name": "symfony/clock",
