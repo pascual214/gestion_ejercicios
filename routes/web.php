@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ExerciseController;
+
 
 Route::get('/', function () {
     return view('main');
@@ -26,5 +28,8 @@ Route::get('/lang/{locale}', function (string $locale) {
 
     return redirect()->back();
 })->name('lang.switch');
+
+Route::get('/', [ExerciseController::class, 'index'])->name('home');
+
 
 require __DIR__.'/auth.php';

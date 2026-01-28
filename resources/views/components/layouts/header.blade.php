@@ -1,4 +1,4 @@
-<div class="navbar bg-blue-100 shadow-sm">
+<div class="navbar bg-blue-100">
     <div class="navbar-start">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -13,19 +13,26 @@
         </div>
         <img src="{{asset("images/HoopLab_recortada.png")}}" alt="imagen" class="h-16 ml-1">
     </div>
+
+
+
     @guest
         <div class="navbar-end hidden lg:flex">
+            <x-language-switcher />
             <ul class="menu menu-horizontal px-1 gap-1">
                 <li><a href='login' class="btn btn-soft btn-primary">{{__("Iniciar Sesión")}}</a></li>
                 <li><a href="register" class="btn btn-primary">{{__("Registrarse")}}</a></li>
             </ul>
         </div>
     @endguest
+
     @auth
         <div class="navbar-end hidden lg:flex">
+
             <div class="flex items-center gap-3">
+                <x-language-switcher />
                 <span class="font-semibold text-sm">
-                    {{ auth()->user()->name }}
+                    Hola, {{ auth()->user()->name }}
                 </span>
                 <form action="logout" method="POST">
                     @csrf
@@ -36,5 +43,4 @@
             </div>
         </div>
     @endauth
-    <x-language-switcher />
 </div>

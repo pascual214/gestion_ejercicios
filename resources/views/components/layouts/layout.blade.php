@@ -8,13 +8,15 @@
     <title>Document</title>
     @vite(["resources/css/app.css", "resources/js/app.js"])
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
+
     <x-layouts.header />
 
-    <main class="h-main bg-blue-300">
-        {{$slot}}
+    <main class="flex-1 bg-blue-100">
+        {{ $slot }}
     </main>
 
     <x-layouts.footer />
+
 </body>
 </html>
