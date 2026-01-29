@@ -1,9 +1,9 @@
 <div class="card w-96 bg-base-100 card-md shadow-sm">
-    <div class="card-body">
-        <h2 class="card-title">{{$exercise->name}}</h2>
-        <p>{{$exercise->description}}</p>
-        <p>{{$exercise->time}}</p>
-        <p>{{$exercise->type}}</p>
+    <div class="card-body shadow-lg hover:shadow-[0_10px_25px_rgba(0,0,0,0.25)] transition-shadow duration-300">
+        <h2 class="card-title justify-center font-bold underline">{{$exercise->name}}</h2>
+        <p class="text-center">{{$exercise->description}}</p>
+        <p>{{__("Tiempo del ejercicio: ")}}<strong>{{$exercise->time}}{{ __(" min.")}}</strong></p>
+        <p>{{ __("Tipo de ejercicio: ")}}<strong>{{$exercise->type}}</strong></p>
         <div class="justify-end card-actions">
 
             <a href="{{ route('exercises.edit', ['exercise' => $exercise->id, 'page' => request()->page]) }}"><button class="btn btn-primary">{{ __("Editar")}}</button></a>

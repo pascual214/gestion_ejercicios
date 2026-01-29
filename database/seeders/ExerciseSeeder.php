@@ -20,7 +20,7 @@ class ExerciseSeeder extends Seeder
                 [
                     'description' => $data['description'],
                     'type' => $data['type'],
-                    'time' => rand(2, 30),
+                    'time' => rand(2, 10),
                 ]
             );
         }

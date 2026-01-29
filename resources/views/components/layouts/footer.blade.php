@@ -41,6 +41,6 @@
         </div>
     </nav>
     <aside>
-        <p>Copyright © {{ now()->year }} - All rights reserved</p>
+        <p>Copyright © {{ now()->year }} - {{ __("All rights reserved")}}</p>
     </aside>
 </footer>
