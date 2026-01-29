@@ -17,7 +17,6 @@
         </div>
     @endguest
     @auth
-
             <div class="flex w-full flex-col">
                 <div class="card bg-blue-100 grid h-40 place-items-center">
                     <h2 class="text-2xl font-semibold text-center"> {{ __("Elige tus ejercicios, crea tu entrenamiento")}}</h2>
@@ -40,5 +39,17 @@
                 </div>
             </div>
 
+            @if(session('edit_success'))
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script>
+                    Swal.fire({
+                        position: "top-center",
+                        icon: "success",
+                        title: "{{ __("Ejercicio editado con exito")}}",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+            @endif
     @endauth
 </x-layouts.layout>

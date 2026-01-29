@@ -50,16 +50,31 @@ class ExerciseController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function edit(Exercise $exercise)
     {
+
+        return view('exercises.edit', compact('exercise'));
         //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update()
+    public function update(Exercise $exercise, Request $request)
     {
+
+        $validated = $request->validate([
+            'name' => 'required|unique:exercises,name,' . $exercise->id,
+            'description' => 'required',
+            'time' => 'required|integer|min:3',
+            'type' => 'required',
+        ]);
+
+        $exercise->update($validated);
+
+        $page = $request->input('page', 1);
+
+        return redirect()->route('main', ['page'=>$page])->with('edit_success', 'Ejercicio actualizado correctamente');
         //
     }
 
