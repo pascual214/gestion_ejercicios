@@ -26,7 +26,8 @@ Route::get('/lang/{locale}', function (string $locale) {
 
 Route::get('/', [ExerciseController::class, 'index'])->name('main');
 
-Route::get('/exercises/create', [ExerciseController::class, 'create'])->name('exercises.create');
-Route::post('/exercises', [ExerciseController::class, 'store'])->name('exercises.store');
+//Importante para crear las rutas respecto a la BBDD
+Route::resource('exercises', ExerciseController::class);
+
 
 require __DIR__.'/auth.php';

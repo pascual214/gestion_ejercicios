@@ -66,8 +66,10 @@ class ExerciseController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy()
+    public function destroy(Exercise $exercise)
     {
+        $exercise->delete();
+        return redirect()->route('main')->with('success', 'Exercise deleted successfully');
         //
     }
 }
