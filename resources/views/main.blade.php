@@ -34,8 +34,8 @@
 
                     </div>
                 </div>
-                <div class="mt-8 flex flex-col items-center gap-6 bg-blue-100">
-                    <a href="{{route("exercises.create")}}"><button class="btn btn-primary">Agregar proyecto</button></a>
+                <div class="mt-8 flex flex-col items-center gap-6 bg-blue-100 mb-6">
+                    <a href="{{route("exercises.create")}}"><button class="btn btn-primary">{{ __("Agregar ejercicio")}}</button></a>
                     {{ $exercises->links() }}
                 </div>
             </div>

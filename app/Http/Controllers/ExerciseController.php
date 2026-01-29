@@ -35,8 +35,8 @@ class ExerciseController extends Controller
      */
     public function store(StoreExerciseRequest $request)
     {
-        $values = $request->input();
-        dd($values);
+        $exercise = Exercise::create($request->validated());
+        return redirect()->route('main');
     }
 
     /**

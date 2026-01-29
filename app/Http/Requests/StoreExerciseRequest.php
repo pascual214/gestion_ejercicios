@@ -22,7 +22,7 @@ class StoreExerciseRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "name" => "required",
+            "name" => "required|unique:exercises,name",
             "description" => "required",
             "time" => "integer|required|min:3",
             "type" => "required",
