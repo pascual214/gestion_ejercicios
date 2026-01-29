@@ -14,7 +14,15 @@ class ExerciseSeeder extends Seeder
      */
     public function run(): void
     {
-        Exercise::factory()->count(10)->create();
-        //
+        foreach (config('exercise') as $name => $data) {
+            Exercise::firstOrCreate(
+                ['name' => $name],
+                [
+                    'description' => $data['description'],
+                    'type' => $data['type'],
+                    'time' => rand(2, 30),
+                ]
+            );
+        }
     }
 }

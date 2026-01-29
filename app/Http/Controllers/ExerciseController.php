@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreExerciseRequest;
 use App\Models\Exercise;
 use Illuminate\Http\Request;
 
@@ -12,12 +13,12 @@ class ExerciseController extends Controller
      */
     public function index()
     {
-        // Devuelve una lista de 3 proyectos por página
-        //$exercise = Exercise::paginate(3);
-        //$fields = $exercise->first()->getFillable();
-        $exercises = Exercise::all();
+        // Devuelve una lista de 10 proyectos por página
+        //$fields = $exercises->first()->getFillable();
+        $exercises = Exercise::paginate(10);
         return view('main', compact('exercises'));
         //
+
     }
 
     /**
@@ -26,14 +27,16 @@ class ExerciseController extends Controller
     public function create()
     {
         //
+        return (view('exercises.create'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store()
+    public function store(StoreExerciseRequest $request)
     {
-
+        $values = $request->input();
+        dd($values);
     }
 
     /**

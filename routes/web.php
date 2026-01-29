@@ -4,11 +4,6 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExerciseController;
 
-
-Route::get('/', function () {
-    return view('main');
-})->name('main');
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -29,7 +24,9 @@ Route::get('/lang/{locale}', function (string $locale) {
     return redirect()->back();
 })->name('lang.switch');
 
-Route::get('/', [ExerciseController::class, 'index'])->name('home');
+Route::get('/', [ExerciseController::class, 'index'])->name('main');
 
+Route::get('/exercises/create', [ExerciseController::class, 'create'])->name('exercises.create');
+Route::post('/exercises', [ExerciseController::class, 'store'])->name('exercises.store');
 
 require __DIR__.'/auth.php';

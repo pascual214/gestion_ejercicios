@@ -32,7 +32,7 @@
             <div class="flex items-center gap-3">
                 <x-language-switcher />
                 <span class="font-semibold text-sm">
-                    Hola, {{ auth()->user()->name }}
+                    {{ __("Hola,")}} {{ auth()->user()->name }}
                 </span>
                 <form action="logout" method="POST">
                     @csrf

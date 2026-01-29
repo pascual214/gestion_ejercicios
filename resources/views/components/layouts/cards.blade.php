@@ -5,7 +5,8 @@
         <p>{{$exercise->time}}</p>
         <p>{{$exercise->type}}</p>
         <div class="justify-end card-actions">
-            <button class="btn btn-primary">Bienn</button>
+            <button class="btn btn-primary">Editar</button>
+            <button class="btn btn-secondary bg-red-600 border-red-700">Borrar</button>
         </div>
     </div>
 </div>

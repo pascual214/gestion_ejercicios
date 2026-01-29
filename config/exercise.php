@@ -205,4 +205,8 @@ return [
         'description' => 'Mejora control del balón mientras te desplazas',
         'type' => 'bote',
     ],
+    'Pick and Roll' => [
+        'description' => 'Pick and roll sin oposición, centrandose en una buena continuación a canasta',
+        'type' => 'ataque',
+    ],
 ];
