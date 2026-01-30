@@ -7,7 +7,7 @@
             <div class="hero-overlay"></div>
             <div class="hero-content text-neutral-content text-center">
                 <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">{{ __('Crea, guarda y comparte') }}</h1>
+                    <h1 class="mb-5 text-5xl font-bold">{{ __('Crea, guarda y comparte.') }}</h1>
                     <p class="mb-5">
                         {{ __('Crea tus entrenamientos para todas las edades y niveles, guardalos y compartelos con amigos, entrenadores o compañeros.') }}
                     </p>
@@ -19,7 +19,7 @@
     @auth
             <div class="flex w-full flex-col">
                 <div class="card bg-blue-100 grid h-40 place-items-center">
-                    <h2 class="text-2xl font-semibold text-center"> {{ __("Elige tus ejercicios, crea tu entrenamiento")}}</h2>
+                    <h2 class="text-2xl font-semibold text-center"> {{ __("Elige tus ejercicios, crea tu entrenamiento.")}}</h2>
                     <h4>{{ __("Elige los ejericicios que mas te gustan, editalos o borralos y crea entrenamientos a tu gusto.") }}</h4>
                 </div>
 
@@ -46,6 +46,19 @@
                         position: "top-center",
                         icon: "success",
                         title: "{{ __("Ejercicio editado con exito")}}",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+            @endif
+
+            @if(session('success'))
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script>
+                    Swal.fire({
+                        position: "top-center",
+                        icon: "success",
+                        title: "{{ __("Ejercicio borrado con exito")}}",
                         showConfirmButton: false,
                         timer: 1500
                     });
