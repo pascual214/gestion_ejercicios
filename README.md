@@ -1,59 +1,89 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><img src="public/images/HoopLab_recortada.png" width="250" alt="HoopLab logo"></p>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Laravel-10-red">
+  <img src="https://img.shields.io/badge/PHP-8.2-blue">
+  <img src="https://img.shields.io/badge/TailwindCSS-4.1-teal">
+  <img src="https://img.shields.io/badge/DaisyUI-5.5-purple">
+  <img src="https://img.shields.io/badge/MySQL-8.0-orange">
+  <img src="https://img.shields.io/badge/License-MIT-green">
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# HOOPLAB
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Aplicación web desarrollada con **Laravel** para crear, gestionar y organizar ejercicios de baloncesto.
+Permite a entrenadores y jugadores **crear, editar, eliminar y visualizar ejercicios**.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+##  Funcionalidades
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- ✅ Autenticación de usuarios
+- ✅ CRUD completo de ejercicios
+- ✅ Listado de ejercicios en tarjetas
+- ✅ Paginación de resultados
+- ✅ Diseño responsive con Tailwind y DaisyUI
+- ✅ Cambio de idioma (ES / EN / FR)
+- ✅ Layout reutilizable con componentes Blade
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+##  Tecnologías utilizadas 🛠️
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **<a href="https://laravel.com" target="_blank">Laravel:</a>** Framework PHP utilizado para la estructura del proyecto y la lógica del backend.
+- **<a href="https://laravel.com/docs/5.1/blade" target="_blank">Blade:</a>** Motor de plantillas para crear vistas, layouts y componentes reutilizables.
+- **<a href="https://tailwindcss.com" target="_blank">Tailwind CSS:</a>** Framework CSS utility-first para el diseño rápido y consistente de la interfaz.
+- **<a href="https://daisyui.com" target="_blank">DaisyUI:</a>** Librería de componentes UI basada en Tailwind CSS.
+- **<a href="https://sweetalert2.github.io" target="_blank">SweetAlert2:</a>** Librería para alertas y confirmaciones interactivas.
+- **<a href="https://www.mysql.com" target="_blank">MySQL:</a>** Base de datos relacional utilizada para almacenar la información del proyecto.
+- **<a href="https://laravel.com/docs/10.x/starter-kits" target="_blank">Laravel Breeze:</a>** Starter kit de autenticación con login, registro y verificación de usuarios.
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Instalación ⚙️
 
-## Code of Conduct
+1. Clona el repositorio:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+git clone https://github.com/tu-usuario/basketball-drill-manager.git
+cd basketball-drill-manager
+```
 
-## Security Vulnerabilities
+2. Instala dependencias:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+composer install
+npm install
+npm run build
+```
 
-## License
+3. Configura el entorno:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+4. Configura la base de datos en .env:
+```bash
+DB_DATABASE=nombre_bd
+DB_USERNAME=usuario
+DB_PASSWORD=contraseña
+```
+
+5. Ejecuta las migraciones:
+```bash
+php artisan migrate
+```
+
+6. Inicia el servidor:
+```bash
+php artisan serve
+```
+
+## Licencia 📄
+
+Este proyecto está licenciado bajo la **Licencia MIT**, lo que permite su uso, copia, modificación y distribución, incluso con fines comerciales, siempre que se mantenga el aviso de copyright original.
