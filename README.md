@@ -48,8 +48,8 @@ Permite a entrenadores y jugadores **crear, editar, eliminar y visualizar ejerci
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/basketball-drill-manager.git
-cd basketball-drill-manager
+git clone https://github.com/pascual214/gestion_ejercicios.git
+cd gestion_ejercicios
 ```
 
 2. Instala dependencias:
@@ -68,6 +68,7 @@ php artisan key:generate
 ```
 
 4. Configura la base de datos en .env:
+
 ```bash
 DB_DATABASE=nombre_bd
 DB_USERNAME=usuario
@@ -75,11 +76,13 @@ DB_PASSWORD=contraseña
 ```
 
 5. Ejecuta las migraciones:
+
 ```bash
 php artisan migrate
 ```
 
 6. Inicia el servidor:
+
 ```bash
 php artisan serve
 ```
