@@ -84,6 +84,10 @@ php artisan migrate
 php artisan serve
 ```
 
+
+---
+
+
 ## Licencia 📄
 
 Este proyecto está licenciado bajo la **Licencia MIT**, lo que permite su uso, copia, modificación y distribución, incluso con fines comerciales, siempre que se mantenga el aviso de copyright original.
