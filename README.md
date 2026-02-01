@@ -12,20 +12,21 @@
 
 # HOOPLAB 🏀
 
-Aplicación web desarrollada con **Laravel** para crear, gestionar y organizar ejercicios de baloncesto.
-Permite a entrenadores y jugadores **crear, editar, eliminar y visualizar ejercicios**.
+**HoopLab** es una aplicación web desarrollada con **Laravel** cuyo objetivo es permitir la gestión de ejercicios de baloncesto.  
+La aplicación está pensada para entrenadores y jugadores que deseen crear, organizar y consultar ejercicios de forma sencilla e intuitiva.
+
+Incluye autenticación de usuarios y una interfaz moderna basada en componentes reutilizables.
 
 ---
 
-##  Funcionalidades
+## Funcionalidades principales 🧩
 
-- ✅ Autenticación de usuarios
-- ✅ CRUD completo de ejercicios
-- ✅ Listado de ejercicios en tarjetas
-- ✅ Paginación de resultados
-- ✅ Diseño responsive con Tailwind y DaisyUI
-- ✅ Cambio de idioma (ES / EN / FR)
-- ✅ Layout reutilizable con componentes Blade
+- Autenticación de usuarios
+- CRUD completo de ejercicios
+- Visualización de ejercicios mediante tarjetas
+- Paginación de resultados
+- Diseño responsive
+- Cambio de idioma (Español / Ingles / Francés)
 
 ---
 
@@ -39,9 +40,19 @@ Permite a entrenadores y jugadores **crear, editar, eliminar y visualizar ejerci
 - **<a href="https://www.mysql.com" target="_blank">MySQL:</a>** Base de datos relacional utilizada para almacenar la información del proyecto.
 - **<a href="https://laravel.com/docs/10.x/starter-kits" target="_blank">Laravel Breeze:</a>** Starter kit de autenticación con login, registro y verificación de usuarios.
 
-
 ---
 
+## Estructura del proyecto
+
+El proyecto sigue la arquitectura **MVC** de Laravel:
+
+- **Crontroladores:** gestionan la lógica de la aplicación.
+- **Modelos:** representan las entidades y la base de datos.
+- **Vistas:** contienen las vistas y componentes reutilizables.
+- **Layouts y componentes Blade:** permiten mantener una estructura limpia y consistente.
+- **Base de datos MySQL:** almacena la información de usuarios y ejercicios.
+
+---
 
 ## Instalación ⚙️
 
@@ -87,9 +98,7 @@ php artisan migrate
 php artisan serve
 ```
 
-
 ---
-
 
 ## Licencia 📄
 
