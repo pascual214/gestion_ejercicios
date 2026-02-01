@@ -36,7 +36,7 @@ class ExerciseController extends Controller
     public function store(StoreExerciseRequest $request)
     {
         $exercise = Exercise::create($request->validated());
-        return redirect()->route('main');
+        return redirect()->route('main')->with('created_success', 'Exercise added successfully');
     }
 
     /**
@@ -84,7 +84,7 @@ class ExerciseController extends Controller
     public function destroy(Exercise $exercise)
     {
         $exercise->delete();
-        return redirect()->route('main')->with('success', 'Exercise deleted successfully');
+        return redirect()->route('main')->with('destroy_success', 'Exercise deleted successfully');
         //
     }
 }

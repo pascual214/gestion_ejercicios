@@ -16,6 +16,7 @@
             </div>
         </div>
     @endguest
+
     @auth
             <div class="flex w-full flex-col">
                 <div class="card bg-blue-100 grid h-40 place-items-center">
@@ -52,7 +53,7 @@
                 </script>
             @endif
 
-            @if(session('success'))
+            @if(session('destroy_success'))
                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 <script>
                     Swal.fire({
@@ -64,5 +65,19 @@
                     });
                 </script>
             @endif
+
+            @if(session('created_success'))
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script>
+                    Swal.fire({
+                        position: "top-center",
+                        icon: "success",
+                        title: "{{ __("Ejercicio creado con exito")}}",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+            @endif
+
     @endauth
 </x-layouts.layout>

@@ -10,7 +10,7 @@
 </p>
 
 
-# HOOPLAB
+# HOOPLAB 🏀
 
 Aplicación web desarrollada con **Laravel** para crear, gestionar y organizar ejercicios de baloncesto.
 Permite a entrenadores y jugadores **crear, editar, eliminar y visualizar ejercicios**.
